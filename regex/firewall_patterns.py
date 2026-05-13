@@ -1,18 +1,24 @@
 patterns = {
 
-    "hostname": r"^(\S+)",
+    "action": r":\s+(ALLOW|DENY|DROP|REJECT)",
 
-    "src_ip": r"src_ip=(\d+\.\d+\.\d+\.\d+)",
+    "protocol": r"(TCP|UDP|HTTP|HTTPS|DNS|FTP|ICMP)",
 
-    "dest_ip": r"dest_ip=(\d+\.\d+\.\d+\.\d+)",
+    "src_zone": r"src\s+(\w+):",
 
-    "country": r"country=(\S+)",
+    "src_ip": r"src\s+\w+:(\d+\.\d+\.\d+\.\d+)",
 
-    "src_port": r"src_port=(\d+)",
+    "src_port": r"src\s+\w+:\d+\.\d+\.\d+\.\d+/(\d+)",
 
-    "dest_port": r"dest_port=(\d+)",
+    "dest_zone": r"dst\s+(\w+):",
 
-    "action": r"action=(\S+)",
+    "dest_ip": r"dst\s+\w+:(\d+\.\d+\.\d+\.\d+)",
 
-    "protocol": r"protocol=(\S+)"
+    "dest_port": r"dst\s+\w+:\d+\.\d+\.\d+\.\d+/(\d+)",
+
+    "policy": r"policy=(\S+)",
+
+    "bytes": r"bytes=(\d+)",
+
+    "duration": r"duration=(\d+)s"
 }

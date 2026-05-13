@@ -1,10 +1,10 @@
 patterns = {
 
-    "eventcode": r"EventCode=(\d+)",
+    "eventcode": r"EventID=(\d+)",
 
-    "username": r"AccountName=(\S+)",
+    "username": r"SubjectUserName=(\S+)",
 
-    "src_ip": r"SourceNetworkAddress=(\d+\.\d+\.\d+\.\d+)",
+    "src_ip": r"IpAddress=(\d+\.\d+\.\d+\.\d+)",
 
     "logontype": r"LogonType=(\d+)"
 }

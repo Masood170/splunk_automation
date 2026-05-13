@@ -1,10 +1,10 @@
 patterns = {
 
-    "hostname": r"^(\S+)",
+    "hostname": r"\d+:\d+:\d+\s+(\S+)",
 
-    "neighbor_ip": r"neighbor=(\d+\.\d+\.\d+\.\d+)",
+    "duplicate_ip": r"Duplicate address\s+(\d+\.\d+\.\d+\.\d+)",
 
-    "protocol": r"protocol=(\S+)",
+    "interface": r"on\s+(\S+)",
 
-    "state": r"state=(\S+)"
+    "mac_address": r"sourced by\s+(\S+)"
 }

@@ -1,35 +1,43 @@
-from regex.firewall_patterns import patterns as firewall_patterns
-from regex.linux_patterns import patterns as linux_patterns
-from regex.windows_patterns import patterns as windows_patterns
-from regex.pan_patterns import patterns as pan_patterns
-from regex.switch_patterns import patterns as switch_patterns
-from regex.router_patterns import patterns as router_patterns
+output = """
 
-all_patterns = {
-    "firewall": firewall_patterns,
-    "linux": linux_patterns,
-    "windows": windows_patterns,
-    "pan": pan_patterns,
-    "switch": switch_patterns,
-    "router": router_patterns
-}
+[firewall_extract]
 
-output = []
+REGEX = .*: (ALLOW|DENY|DROP|REJECT) (TCP|UDP|HTTP|HTTPS|DNS|FTP|ICMP) src (\\w+):(\\d+\\.\\d+\\.\\d+\\.\\d+)/(\\d+) dst (\\w+):(\\d+\\.\\d+\\.\\d+\\.\\d+)/(\\d+) policy=(\\S+) bytes=(\\d+) duration=(\\d+)s
 
-for source, patterns in all_patterns.items():
+FORMAT = action::$1 protocol::$2 src_zone::$3 src_ip::$4 src_port::$5 dest_zone::$6 dest_ip::$7 dest_port::$8 policy::$9 bytes::$10 duration::$11
 
-    for field, regex in patterns.items():
 
-        stanza = f"""
-[{source}_{field}]
-REGEX = {regex}
-FORMAT = {field}::$1
+[windows_extract]
+
+REGEX = .*EventID=(\\d+).*SubjectUserName=(\\S+).*IpAddress=(\\d+\\.\\d+\\.\\d+\\.\\d+).*LogonType=(\\d+)
+
+FORMAT = eventcode::$1 username::$2 src_ip::$3 logontype::$4
+
+
+[linux_extract]
+
+REGEX = ^(\\d+-\\d+-\\d+\\s+\\d+:\\d+:\\d+).*sshd\\[(\\d+)\\].*for (\\S+) from (\\d+\\.\\d+\\.\\d+\\.\\d+)
+
+FORMAT = timestamp::$1 pid::$2 username::$3 src_ip::$4
+
+
+[router_extract]
+
+REGEX = .* (RTR-\\S+) .*Duplicate address (\\d+\\.\\d+\\.\\d+\\.\\d+) on (\\S+), sourced by (\\S+)
+
+FORMAT = hostname::$1 duplicate_ip::$2 interface::$3 mac_address::$4
+
+
+[switch_extract]
+
+REGEX = (\\S+) interface=(\\S+) status=(\\S+) vlan=(\\d+) mac=(\\S+)
+
+FORMAT = hostname::$1 interface::$2 status::$3 vlan::$4 mac_address::$5
+
 """
 
-        output.append(stanza)
+with open("../output/transforms.conf", "w") as f:
 
-with open("output/transforms.conf", "w") as f:
+    f.write(output)
 
-    f.write("\n".join(output))
-
-print("transforms.conf generated")
+print("transforms.conf generated successfully")

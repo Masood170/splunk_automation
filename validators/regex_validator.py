@@ -1,40 +1,36 @@
 import re
 
 from regex.firewall_patterns import patterns as firewall_patterns
-from regex.linux_patterns import patterns as linux_patterns
 from regex.windows_patterns import patterns as windows_patterns
-from regex.pan_patterns import patterns as pan_patterns
-from regex.switch_patterns import patterns as switch_patterns
+from regex.linux_patterns import patterns as linux_patterns
 from regex.router_patterns import patterns as router_patterns
+from regex.switch_patterns import patterns as switch_patterns
 
 sources = {
 
-    "firewall": ("logs/firewall.log", firewall_patterns),
+    "FIREWALL": ("../logs/firewall.log", firewall_patterns),
 
-    "linux": ("logs/linux.log", linux_patterns),
+    "WINDOWS": ("../logs/windows.log", windows_patterns),
 
-    "windows": ("logs/windows.log", windows_patterns),
+    "LINUX": ("../logs/linux.log", linux_patterns),
 
-    "pan": ("logs/pan.log", pan_patterns),
+    "ROUTER": ("../logs/router.log", router_patterns),
 
-    "switch": ("logs/switch.log", switch_patterns),
-
-    "router": ("logs/router.log", router_patterns)
+    "SWITCH": ("../logs/switch.log", switch_patterns)
 }
 
-for source, (logfile, patterns) in sources.items():
+for source_name, (filepath, patterns) in sources.items():
 
-    print(f"\n========== VALIDATING {source.upper()} LOGS ==========\n")
+    print(f"\n{'='*15} VALIDATING {source_name} LOGS {'='*15}\n")
 
-    with open(logfile) as f:
+    with open(filepath, encoding="utf-8") as f:
 
         sample = f.readline()
 
-    print("Sample Log:\n")
-
+    print("RAW LOG:\n")
     print(sample)
 
-    print("\nExtracted Fields:\n")
+    print("\nEXTRACTED FIELDS:\n")
 
     for field, pattern in patterns.items():
 
@@ -47,3 +43,5 @@ for source, (logfile, patterns) in sources.items():
         else:
 
             print(f"{field}: NOT FOUND")
+
+    print("\n")

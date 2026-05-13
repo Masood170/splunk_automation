@@ -1,16 +1,12 @@
 patterns = {
 
-    "month": r"^(\w+)",
+    "timestamp": r"^(\d+-\d+-\d+\s+\d+:\d+:\d+)",
 
-    "hostname": r"^\w+\s+\d+\s+\d+:\d+:\d+\s+(\S+)",
+    "process": r"(sshd)",
 
-    "process": r"(\w+)\[\d+\]",
+    "pid": r"sshd\[(\d+)\]",
 
-    "pid": r"\[(\d+)\]",
+    "username": r"for\s+(\S+)\s+from",
 
-    "username": r"for (\S+)",
-
-    "src_ip": r"from (\d+\.\d+\.\d+\.\d+)",
-
-    "port": r"port (\d+)"
+    "src_ip": r"from\s+(\d+\.\d+\.\d+\.\d+)"
 }

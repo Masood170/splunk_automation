@@ -1,36 +1,43 @@
-props = """
+output = """
+
 [firewall_logs]
+
 SHOULD_LINEMERGE = false
-KV_MODE = none
+
 REPORT-firewall = firewall_extract
 
-[linux_logs]
-SHOULD_LINEMERGE = false
-REPORT-linux = linux_extract
 
 [windows_logs]
+
 SHOULD_LINEMERGE = false
-KV_MODE = none
+
 REPORT-windows = windows_extract
 
-[pan_logs]
-SHOULD_LINEMERGE = false
-KV_MODE = none
-REPORT-pan = pan_extract
 
-[switch_logs]
+[linux_logs]
+
 SHOULD_LINEMERGE = false
-KV_MODE = none
+
+REPORT-linux = linux_extract
+
+
+[routers_logs]
+
+SHOULD_LINEMERGE = false
+
+REPORT-router = router_extract
+
+
+[switches_logs]
+
+SHOULD_LINEMERGE = false
+
 REPORT-switch = switch_extract
 
-[router_logs]
-SHOULD_LINEMERGE = false
-KV_MODE = none
-REPORT-router = router_extract
 """
 
-with open("output/props.conf", "w") as f:
+with open("../output/props.conf", "w") as f:
 
-    f.write(props)
+    f.write(output)
 
-print("props.conf generated")
+print("props.conf generated successfully")
