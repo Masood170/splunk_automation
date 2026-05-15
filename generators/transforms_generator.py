@@ -2,41 +2,53 @@ output = """
 
 [firewall_extract]
 
-REGEX = .*: (ALLOW|DENY|DROP|REJECT) (TCP|UDP|HTTP|HTTPS|DNS|FTP|ICMP) src (\\w+):(\\d+\\.\\d+\\.\\d+\\.\\d+)/(\\d+) dst (\\w+):(\\d+\\.\\d+\\.\\d+\\.\\d+)/(\\d+) policy=(\\S+) bytes=(\\d+) duration=(\\d+)s
+REGEX = ^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2})\\s+(FIREWALL)\\s+action=(ALLOW|DENY|DROP|REJECT)\\s+src=(\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+dst=(\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+sport=(\\d+)\\s+dport=(\\d+)\\s+proto=(TCP|UDP|ICMP)\\s+bytes=(\\d+)\\s+src_zone=(\\S+)\\s+dst_zone=(\\S+)\\s+policy_id=(\\d+)
 
-FORMAT = action::$1 protocol::$2 src_zone::$3 src_ip::$4 src_port::$5 dest_zone::$6 dest_ip::$7 dest_port::$8 policy::$9 bytes::$10 duration::$11
+FORMAT = timestamp::$1 device::$2 action::$3 src_ip::$4 dest_ip::$5 src_port::$6 dest_port::$7 protocol::$8 bytes::$9 src_zone::$10 dest_zone::$11 policy_id::$12
+
 
 
 [windows_extract]
 
-REGEX = .*EventID=(\\d+).*SubjectUserName=(\\S+).*IpAddress=(\\d+\\.\\d+\\.\\d+\\.\\d+).*LogonType=(\\d+)
+REGEX = EventID=(\\d+).*Host=(\\S+).*User=(\\S+).*PID=(\\d+).*Source=(\\S+).*Channel=(\\S+).*Message="([^"]+)"
 
-FORMAT = eventcode::$1 username::$2 src_ip::$3 logontype::$4
+FORMAT = eventcode::$1 hostname::$2 username::$3 pid::$4 source_name::$5 channel::$6 message::$7
+
 
 
 [linux_extract]
 
-REGEX = ^(\\d+-\\d+-\\d+\\s+\\d+:\\d+:\\d+).*sshd\\[(\\d+)\\].*for (\\S+) from (\\d+\\.\\d+\\.\\d+\\.\\d+)
+REGEX = ^(\\w+\\s+\\d+\\s+\\d+:\\d+:\\d+)\\s+(\\S+)\\s+(\\w+)\\[(\\d+)\\]:\\s+\\[(INFO|WARN|ERROR|DEBUG|CRIT)\\]\\s+\\[(auth|daemon|cron|kern|syslog|user)\\]\\s+(.*)
 
-FORMAT = timestamp::$1 pid::$2 username::$3 src_ip::$4
+FORMAT = timestamp::$1 hostname::$2 process::$3 pid::$4 log_level::$5 facility::$6 message::$7
+
 
 
 [router_extract]
 
-REGEX = .* (RTR-\\S+) .*Duplicate address (\\d+\\.\\d+\\.\\d+\\.\\d+) on (\\S+), sourced by (\\S+)
+REGEX = ^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2})\\s+(RTR-\\S+)\\s+%(BGP|OSPF|EIGRP|RIP|ISIS)-\\d+-ADJCHANGE:\\s+(\\S+)\\s+Peer\\s+(\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+-\\s+(.*?)\\s+AS(\\d+)
 
-FORMAT = hostname::$1 duplicate_ip::$2 interface::$3 mac_address::$4
+FORMAT = timestamp::$1 hostname::$2 protocol::$3 interface::$4 peer_ip::$5 message::$6 asn::$7
+
 
 
 [switch_extract]
 
-REGEX = (\\S+) interface=(\\S+) status=(\\S+) vlan=(\\d+) mac=(\\S+)
+REGEX = ^(\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2})\\s+(SW-CORE-\\d+)\\s+%SWITCH-\\d+-NOTICE:\\s+Interface\\s+(\\S+)\\s+VLAN\\s+(\\d+)\\s+-\\s+(.*?)\\s+\\[Uptime:\\s+([^\\]]+)\\]
 
-FORMAT = hostname::$1 interface::$2 status::$3 vlan::$4 mac_address::$5
+FORMAT = timestamp::$1 hostname::$2 interface::$3 vlan::$4 message::$5 uptime::$6
+
+
+
+[syslog_extract]
+
+REGEX = ^([A-Z][a-z]{2}\\s+\\d+\\s+\\d+:\\d+:\\d+)\\s+(\\S+)\\s+([^\\[:]+)(?:\\[\\d+\\])?:\\s+(.*)
+
+FORMAT = timestamp::$1 hostname::$2 process::$3 message::$4
 
 """
 
-with open("../output/transforms.conf", "w") as f:
+with open("output/transforms.conf", "w") as f:
 
     f.write(output)
 

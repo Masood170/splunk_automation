@@ -1,2 +1,20 @@
-2026-05-12 11:05:35.949206 sshd[1234]: Accepted password for root from 192.168.1.10
-host = 10.236.6.52:8088source = linux_logssourcetype = syslog
+May 14 13:51:37 linux-host-04 kernel[2153]: [CRIT] [user] Accepted publickey for www-data from 120.62.233.221
+May 14 13:51:34 linux-host-01 sshd[9013]: [DEBUG] [kern] session opened for user nobody by (uid=0)
+May 14 13:51:31 linux-host-01 sshd[4638]: [ERROR] [user] Failed password for nobody from 36.156.9.97
+May 14 13:51:28 linux-host-03 sshd[6450]: [DEBUG] [daemon] COMMAND=/bin/ls ; USER=nobody
+May 14 13:51:25 linux-host-01 sudo[2805]: [WARN] [auth] COMMAND=/bin/ls ; USER=deploy
+May 14 13:51:22 linux-host-05 kernel[4587]: [INFO] [cron] Failed password for deploy from 46.203.60.238
+May 14 13:51:19 linux-host-01 sshd[1866]: [ERROR] [daemon] Stopped sshd service.
+May 14 13:51:16 linux-host-05 kernel[7798]: [DEBUG] [auth] COMMAND=/bin/ls ; USER=nobody
+May 14 13:51:13 linux-host-05 sshd[6670]: [WARN] [kern] Accepted publickey for deploy from 144.175.99.196
+May 14 13:51:10 linux-host-03 nginx[3578]: [WARN] [kern] Accepted publickey for deploy from 202.163.74.253
+May 14 13:51:07 linux-host-05 sudo[301]: [ERROR] [daemon] Starting sudo service...
+May 14 13:51:04 linux-host-05 auditd[1127]: [DEBUG] [syslog] Starting auditd service...
+May 14 13:51:01 linux-host-01 auditd[3072]: [WARN] [daemon] Accepted publickey for root from 212.243.141.122
+May 14 13:50:58 linux-host-04 systemd[4934]: [WARN] [cron] COMMAND=/bin/ls ; USER=deploy
+May 14 13:50:55 linux-host-03 sshd[4899]: [INFO] [auth] Stopped sshd service.
+May 14 13:50:52 linux-host-02 auditd[4765]: [ERROR] [daemon] Starting auditd service...
+May 14 13:50:49 linux-host-01 systemd[4586]: [WARN] [auth] Stopped systemd service.
+May 14 13:50:46 linux-host-05 cron[6566]: [WARN] [cron] session opened for user root by (uid=0)
+May 14 13:50:43 linux-host-02 systemd[9082]: [INFO] [syslog] Accepted publickey for nobody from 198.96.39.163
+May 14 13:50:40 linux-host-01 systemd[6659]: [WARN] [user] Stopped systemd service.

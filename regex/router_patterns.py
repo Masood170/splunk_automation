@@ -1,10 +1,17 @@
 patterns = {
 
-    "hostname": r"\d+:\d+:\d+\s+(\S+)",
+    "timestamp": r"^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})",
 
-    "duplicate_ip": r"Duplicate address\s+(\d+\.\d+\.\d+\.\d+)",
+    "hostname": r"(RTR-\S+)",
 
-    "interface": r"on\s+(\S+)",
+    "protocol": r"%(BGP|OSPF|EIGRP|RIP|ISIS)-",
 
-    "mac_address": r"sourced by\s+(\S+)"
+    "interface": r":\s+(\S+)\s+Peer",
+
+    "peer_ip": r"Peer\s+(\d+\.\d+\.\d+\.\d+)",
+
+    "message": r"-\s+(.*?)\s+AS\d+",
+
+    "asn": r"AS(\d+)"
+
 }

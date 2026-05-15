@@ -1,2 +1,20 @@
-2026-05-12 TueT14:36:07 FW-01 %ASA-6-302013: DROP HTTP src INSIDE:247.171.19.187/27886 dst TRUST:127.119.191.146/3306 policy=policy-001 bytes=36944 duration=279s
-host = 10.236.6.52:8088source = firewall_logssourcetype = firewall
+2026-05-14T13:47:21 FIREWALL action=DENY src=192.168.146.55 dst=10.181.96.48 sport=36153 dport=3389 proto=TCP bytes=959 src_zone=OUTSIDE dst_zone=OUTSIDE policy_id=46
+2026-05-14T13:47:18 FIREWALL action=REJECT src=192.168.167.102 dst=10.131.253.211 sport=23440 dport=21 proto=ICMP bytes=560 src_zone=DMZ dst_zone=DMZ policy_id=6
+2026-05-14T13:47:15 FIREWALL action=DENY src=192.168.211.69 dst=10.251.148.201 sport=51758 dport=80 proto=TCP bytes=163 src_zone=DMZ dst_zone=INSIDE policy_id=7
+2026-05-14T13:47:12 FIREWALL action=DENY src=192.168.23.200 dst=10.214.101.137 sport=55134 dport=80 proto=UDP bytes=438 src_zone=OUTSIDE dst_zone=OUTSIDE policy_id=49
+2026-05-14T13:47:09 FIREWALL action=DENY src=192.168.63.70 dst=10.53.27.28 sport=34319 dport=3389 proto=TCP bytes=1272 src_zone=DMZ dst_zone=INSIDE policy_id=74
+2026-05-14T13:47:06 FIREWALL action=REJECT src=192.168.177.120 dst=10.201.148.6 sport=28212 dport=53 proto=ICMP bytes=978 src_zone=INSIDE dst_zone=INSIDE policy_id=49
+2026-05-14T13:47:03 FIREWALL action=DENY src=192.168.6.221 dst=10.24.116.169 sport=4670 dport=3389 proto=UDP bytes=588 src_zone=DMZ dst_zone=INSIDE policy_id=90
+2026-05-14T13:47:00 FIREWALL action=REJECT src=192.168.150.141 dst=10.170.100.153 sport=25578 dport=80 proto=ICMP bytes=1153 src_zone=OUTSIDE dst_zone=OUTSIDE policy_id=95
+2026-05-14T13:46:57 FIREWALL action=DENY src=192.168.63.91 dst=10.204.149.243 sport=30788 dport=22 proto=ICMP bytes=596 src_zone=DMZ dst_zone=INSIDE policy_id=86
+2026-05-14T13:46:54 FIREWALL action=DROP src=192.168.159.8 dst=10.114.195.1 sport=56414 dport=22 proto=UDP bytes=74 src_zone=DMZ dst_zone=DMZ policy_id=67
+2026-05-14T13:46:51 FIREWALL action=DROP src=192.168.137.176 dst=10.206.94.208 sport=35527 dport=21 proto=TCP bytes=1109 src_zone=OUTSIDE dst_zone=OUTSIDE policy_id=69
+2026-05-14T13:46:48 FIREWALL action=DENY src=192.168.36.96 dst=10.57.149.131 sport=9578 dport=443 proto=TCP bytes=1206 src_zone=DMZ dst_zone=OUTSIDE policy_id=90
+2026-05-14T13:46:45 FIREWALL action=REJECT src=192.168.209.69 dst=10.183.149.50 sport=35620 dport=443 proto=TCP bytes=1265 src_zone=INSIDE dst_zone=DMZ policy_id=72
+2026-05-14T13:46:42 FIREWALL action=REJECT src=192.168.230.203 dst=10.229.254.185 sport=32739 dport=3389 proto=TCP bytes=509 src_zone=INSIDE dst_zone=DMZ policy_id=33
+2026-05-14T13:46:39 FIREWALL action=ALLOW src=192.168.206.111 dst=10.145.210.108 sport=24957 dport=8080 proto=UDP bytes=701 src_zone=DMZ dst_zone=DMZ policy_id=63
+2026-05-14T13:46:36 FIREWALL action=DROP src=192.168.13.166 dst=10.34.97.148 sport=22143 dport=8080 proto=TCP bytes=569 src_zone=DMZ dst_zone=DMZ policy_id=61
+2026-05-14T13:46:33 FIREWALL action=DENY src=192.168.67.7 dst=10.250.104.226 sport=31753 dport=25 proto=ICMP bytes=1362 src_zone=INSIDE dst_zone=OUTSIDE policy_id=56
+2026-05-14T13:46:30 FIREWALL action=DENY src=192.168.8.104 dst=10.24.72.51 sport=33344 dport=80 proto=ICMP bytes=545 src_zone=DMZ dst_zone=DMZ policy_id=56
+2026-05-14T13:46:27 FIREWALL action=REJECT src=192.168.211.193 dst=10.152.74.95 sport=29629 dport=22 proto=ICMP bytes=978 src_zone=DMZ dst_zone=OUTSIDE policy_id=26
+2026-05-14T13:46:24 FIREWALL action=REJECT src=192.168.160.174 dst=10.124.0.84 sport=43837 dport=8080 proto=ICMP bytes=1206 src_zone=INSIDE dst_zone=DMZ policy_id=32

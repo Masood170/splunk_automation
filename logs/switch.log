@@ -1,100 +1,20 @@
-SW5 interface=Gig0/18 status=up vlan=42 mac=da:5f:77:d1:60:5a
-SW10 interface=Gig0/43 status=down vlan=98 mac=ee:b4:d0:ef:37:56
-SW9 interface=Gig0/13 status=up vlan=53 mac=fc:eb:17:f2:f7:27
-SW10 interface=Gig0/48 status=down vlan=42 mac=80:94:e4:16:c9:e2
-SW1 interface=Gig0/46 status=down vlan=80 mac=42:1e:d0:66:87:29
-SW6 interface=Gig0/22 status=up vlan=48 mac=7e:b9:4c:0b:15:a9
-SW8 interface=Gig0/43 status=down vlan=27 mac=b2:1f:b6:bb:10:aa
-SW2 interface=Gig0/20 status=down vlan=93 mac=56:b0:32:06:69:59
-SW10 interface=Gig0/19 status=down vlan=80 mac=3c:bb:9b:83:ad:8a
-SW8 interface=Gig0/36 status=down vlan=9 mac=8e:3d:94:39:b4:84
-SW6 interface=Gig0/36 status=down vlan=86 mac=16:47:32:d5:ed:fc
-SW10 interface=Gig0/9 status=up vlan=80 mac=52:27:5f:ed:38:05
-SW1 interface=Gig0/1 status=up vlan=79 mac=5a:8d:3d:5d:fd:70
-SW4 interface=Gig0/5 status=down vlan=100 mac=66:5d:19:25:8a:2f
-SW4 interface=Gig0/15 status=down vlan=59 mac=28:b0:f0:75:8e:92
-SW7 interface=Gig0/7 status=up vlan=49 mac=20:50:47:cd:c1:87
-SW1 interface=Gig0/39 status=down vlan=28 mac=da:93:61:9d:1e:37
-SW9 interface=Gig0/15 status=up vlan=11 mac=28:f8:0a:ac:13:60
-SW8 interface=Gig0/12 status=up vlan=51 mac=bc:8d:ef:a0:b7:db
-SW9 interface=Gig0/19 status=up vlan=95 mac=5a:07:44:97:10:e2
-SW10 interface=Gig0/1 status=up vlan=17 mac=94:bd:e7:3d:d2:26
-SW9 interface=Gig0/33 status=down vlan=51 mac=50:1d:a6:8d:8b:90
-SW1 interface=Gig0/33 status=up vlan=2 mac=3a:4a:4c:ee:46:35
-SW8 interface=Gig0/26 status=down vlan=74 mac=20:81:41:d3:82:b8
-SW8 interface=Gig0/40 status=up vlan=32 mac=54:66:fe:98:2d:e3
-SW4 interface=Gig0/41 status=up vlan=85 mac=a8:69:74:d0:cd:b8
-SW3 interface=Gig0/14 status=down vlan=31 mac=fc:3b:a4:40:84:de
-SW7 interface=Gig0/7 status=up vlan=10 mac=da:ea:da:54:ac:63
-SW4 interface=Gig0/13 status=down vlan=83 mac=62:4c:2c:e6:6a:d6
-SW10 interface=Gig0/3 status=up vlan=54 mac=b4:25:d7:4a:68:ac
-SW7 interface=Gig0/18 status=up vlan=57 mac=bc:bc:58:fa:40:a5
-SW9 interface=Gig0/9 status=down vlan=5 mac=60:a0:c8:85:86:08
-SW10 interface=Gig0/9 status=up vlan=50 mac=50:18:53:78:05:a5
-SW4 interface=Gig0/11 status=down vlan=18 mac=68:40:b4:40:89:70
-SW9 interface=Gig0/40 status=up vlan=94 mac=ae:5f:1d:24:4b:e7
-SW2 interface=Gig0/31 status=up vlan=97 mac=54:7c:e3:16:56:f2
-SW10 interface=Gig0/18 status=up vlan=80 mac=6c:c0:74:76:20:0f
-SW8 interface=Gig0/15 status=down vlan=34 mac=bc:8b:bb:8a:7b:fe
-SW3 interface=Gig0/31 status=down vlan=47 mac=46:a7:6b:6f:f1:74
-SW3 interface=Gig0/9 status=up vlan=98 mac=c4:e8:f9:29:e1:06
-SW1 interface=Gig0/4 status=down vlan=83 mac=5e:87:12:27:0a:ba
-SW4 interface=Gig0/13 status=up vlan=74 mac=86:93:64:a3:98:75
-SW5 interface=Gig0/46 status=up vlan=70 mac=b8:aa:06:2d:1d:99
-SW10 interface=Gig0/22 status=down vlan=60 mac=10:50:ae:c9:3e:2f
-SW1 interface=Gig0/38 status=up vlan=95 mac=58:21:92:d8:70:f5
-SW8 interface=Gig0/35 status=down vlan=20 mac=26:c1:49:8c:62:1b
-SW4 interface=Gig0/36 status=up vlan=50 mac=66:4d:ed:bc:06:d1
-SW7 interface=Gig0/33 status=up vlan=36 mac=ba:12:f2:ef:d6:d0
-SW9 interface=Gig0/20 status=up vlan=74 mac=c8:7a:a7:b5:79:36
-SW1 interface=Gig0/26 status=up vlan=88 mac=60:45:6c:21:e6:91
-SW1 interface=Gig0/45 status=up vlan=84 mac=10:5a:6d:1b:0c:66
-SW2 interface=Gig0/19 status=up vlan=18 mac=b6:45:13:1e:05:b4
-SW5 interface=Gig0/4 status=up vlan=43 mac=76:a9:6e:9b:65:6d
-SW9 interface=Gig0/14 status=down vlan=53 mac=f4:27:32:36:a5:8a
-SW2 interface=Gig0/23 status=down vlan=84 mac=e4:02:84:7b:f8:e2
-SW9 interface=Gig0/34 status=down vlan=5 mac=ca:41:e9:99:cb:6f
-SW3 interface=Gig0/25 status=up vlan=39 mac=94:d2:5a:fb:aa:83
-SW2 interface=Gig0/22 status=down vlan=4 mac=bc:b3:20:10:22:a6
-SW1 interface=Gig0/22 status=down vlan=47 mac=4e:e1:77:d3:b0:2d
-SW3 interface=Gig0/35 status=up vlan=10 mac=c0:a0:55:f7:51:76
-SW9 interface=Gig0/10 status=down vlan=22 mac=72:ce:f1:46:04:10
-SW5 interface=Gig0/18 status=up vlan=38 mac=a8:4d:e0:03:4a:f9
-SW3 interface=Gig0/2 status=down vlan=25 mac=3c:61:a7:59:99:d7
-SW10 interface=Gig0/9 status=down vlan=64 mac=84:10:7c:62:2d:79
-SW5 interface=Gig0/13 status=down vlan=35 mac=7c:d3:3e:18:87:99
-SW5 interface=Gig0/24 status=down vlan=90 mac=b2:8a:35:26:b5:af
-SW5 interface=Gig0/13 status=down vlan=52 mac=1e:ac:d6:fa:9d:ce
-SW4 interface=Gig0/22 status=down vlan=62 mac=46:6d:1e:98:c2:4d
-SW5 interface=Gig0/9 status=down vlan=22 mac=02:b5:97:ad:ef:8c
-SW8 interface=Gig0/23 status=down vlan=100 mac=7a:1c:69:fe:23:29
-SW6 interface=Gig0/45 status=up vlan=57 mac=64:ac:ee:c6:84:3e
-SW9 interface=Gig0/35 status=down vlan=76 mac=a2:9d:e4:0d:a2:4e
-SW6 interface=Gig0/5 status=up vlan=38 mac=b0:d6:ec:ca:fc:55
-SW10 interface=Gig0/9 status=down vlan=46 mac=58:26:fe:05:79:aa
-SW9 interface=Gig0/15 status=down vlan=63 mac=e0:b6:92:1e:ee:38
-SW3 interface=Gig0/5 status=down vlan=44 mac=a2:e7:77:65:26:77
-SW2 interface=Gig0/21 status=up vlan=21 mac=78:f4:d5:6d:71:c4
-SW7 interface=Gig0/43 status=up vlan=19 mac=de:c9:ed:bb:ad:ab
-SW3 interface=Gig0/2 status=up vlan=60 mac=54:bb:b4:e2:d2:a5
-SW1 interface=Gig0/44 status=up vlan=76 mac=ea:d4:5f:79:c0:14
-SW10 interface=Gig0/1 status=up vlan=34 mac=32:cd:44:a9:ba:2d
-SW10 interface=Gig0/11 status=up vlan=90 mac=5c:14:c0:92:24:da
-SW10 interface=Gig0/43 status=up vlan=81 mac=74:18:53:3e:4b:f5
-SW1 interface=Gig0/6 status=up vlan=71 mac=66:79:41:ae:13:5d
-SW10 interface=Gig0/30 status=down vlan=84 mac=a8:0a:20:b4:97:80
-SW2 interface=Gig0/4 status=down vlan=40 mac=98:57:d1:24:a3:9f
-SW8 interface=Gig0/2 status=up vlan=30 mac=5c:89:f7:08:af:1d
-SW10 interface=Gig0/46 status=down vlan=40 mac=b6:83:60:fb:a1:d8
-SW8 interface=Gig0/4 status=down vlan=58 mac=2a:87:9b:1d:53:44
-SW1 interface=Gig0/23 status=up vlan=5 mac=18:cb:aa:83:ba:fc
-SW5 interface=Gig0/4 status=up vlan=78 mac=88:00:79:65:00:10
-SW7 interface=Gig0/37 status=down vlan=55 mac=44:77:7b:1c:cf:3f
-SW1 interface=Gig0/19 status=down vlan=49 mac=a6:c4:ab:7a:76:32
-SW7 interface=Gig0/47 status=down vlan=67 mac=c8:fd:99:80:c5:aa
-SW5 interface=Gig0/28 status=up vlan=15 mac=6c:58:ba:ac:2b:81
-SW4 interface=Gig0/30 status=up vlan=10 mac=7e:38:86:75:7b:01
-SW5 interface=Gig0/1 status=up vlan=13 mac=66:59:75:d0:18:bc
-SW4 interface=Gig0/15 status=up vlan=66 mac=60:49:52:48:90:90
-SW5 interface=Gig0/31 status=up vlan=55 mac=e2:36:a1:66:79:23
-SW8 interface=Gig0/34 status=down vlan=35 mac=02:20:90:03:b8:20
+2026-05-14T13:52:25 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/23 VLAN 10 - Interface line protocol changed to DOWN [Uptime: 947d 21h]
+2026-05-14T13:52:22 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/9 VLAN 20 - MAC address table overflow [Uptime: 741d 12h]
+2026-05-14T13:52:19 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/41 VLAN 30 - MAC address table overflow [Uptime: 312d 13h]
+2026-05-14T13:52:16 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/45 VLAN 100 - CDP neighbor discovered [Uptime: 875d 9h]
+2026-05-14T13:52:13 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/47 VLAN 40 - Port security violation [Uptime: 572d 15h]
+2026-05-14T13:52:10 SW-CORE-01 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/47 VLAN 200 - Interface line protocol changed to UP [Uptime: 664d 1h]
+2026-05-14T13:52:07 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/41 VLAN 100 - Interface line protocol changed to UP [Uptime: 725d 23h]
+2026-05-14T13:52:04 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/45 VLAN 40 - VLAN created [Uptime: 133d 20h]
+2026-05-14T13:52:01 SW-CORE-01 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/46 VLAN 40 - Port security violation [Uptime: 412d 15h]
+2026-05-14T13:51:58 SW-CORE-03 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/45 VLAN 200 - CDP neighbor discovered [Uptime: 103d 18h]
+2026-05-14T13:51:55 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/38 VLAN 10 - LACP partner information changed [Uptime: 202d 12h]
+2026-05-14T13:51:52 SW-CORE-03 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/46 VLAN 100 - LACP partner information changed [Uptime: 439d 0h]
+2026-05-14T13:51:49 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/3 VLAN 40 - STP: port transitioned to FORWARDING [Uptime: 9d 18h]
+2026-05-14T13:51:46 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/32 VLAN 10 - VLAN created [Uptime: 211d 17h]
+2026-05-14T13:51:43 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/4 VLAN 30 - VLAN created [Uptime: 785d 5h]
+2026-05-14T13:51:40 SW-CORE-03 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/38 VLAN 100 - Interface line protocol changed to DOWN [Uptime: 944d 17h]
+2026-05-14T13:51:37 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/41 VLAN 100 - MAC address table overflow [Uptime: 984d 19h]
+2026-05-14T13:51:34 SW-CORE-02 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/9 VLAN 10 - CDP neighbor discovered [Uptime: 437d 7h]
+2026-05-14T13:51:31 SW-CORE-03 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/47 VLAN 200 - Interface line protocol changed to UP [Uptime: 663d 19h]
+2026-05-14T13:51:28 SW-CORE-04 %SWITCH-5-NOTICE: Interface GigabitEthernet1/0/3 VLAN 100 - STP: port transitioned to FORWARDING [Uptime: 303d 22h]

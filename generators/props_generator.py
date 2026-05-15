@@ -1,42 +1,54 @@
 output = """
 
-[firewall_logs]
+[firewall]
 
 SHOULD_LINEMERGE = false
-
+KV_MODE = none
 REPORT-firewall = firewall_extract
 
 
-[windows_logs]
+
+[windows]
 
 SHOULD_LINEMERGE = false
-
+KV_MODE = none
 REPORT-windows = windows_extract
 
 
-[linux_logs]
+
+[linux]
 
 SHOULD_LINEMERGE = false
-
+KV_MODE = none
 REPORT-linux = linux_extract
 
 
-[routers_logs]
+
+[routers]
 
 SHOULD_LINEMERGE = false
-
+KV_MODE = none
 REPORT-router = router_extract
 
 
-[switches_logs]
+
+[switches]
 
 SHOULD_LINEMERGE = false
-
+KV_MODE = none
 REPORT-switch = switch_extract
+
+
+
+[syslog]
+
+SHOULD_LINEMERGE = false
+KV_MODE = none
+REPORT-syslog = syslog_extract
 
 """
 
-with open("../output/props.conf", "w") as f:
+with open("output/props.conf", "w") as f:
 
     f.write(output)
 

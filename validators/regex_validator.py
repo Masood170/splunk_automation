@@ -1,4 +1,5 @@
 import re
+import os
 
 from regex.firewall_patterns import patterns as firewall_patterns
 from regex.windows_patterns import patterns as windows_patterns
@@ -6,42 +7,72 @@ from regex.linux_patterns import patterns as linux_patterns
 from regex.router_patterns import patterns as router_patterns
 from regex.switch_patterns import patterns as switch_patterns
 
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 sources = {
 
-    "FIREWALL": ("../logs/firewall.log", firewall_patterns),
+    "FIREWALL": (
+        os.path.join(BASE_DIR, "logs", "firewall.log"),
+        firewall_patterns
+    ),
 
-    "WINDOWS": ("../logs/windows.log", windows_patterns),
+    "WINDOWS": (
+        os.path.join(BASE_DIR, "logs", "windows.log"),
+        windows_patterns
+    ),
 
-    "LINUX": ("../logs/linux.log", linux_patterns),
+    "LINUX": (
+        os.path.join(BASE_DIR, "logs", "linux.log"),
+        linux_patterns
+    ),
 
-    "ROUTER": ("../logs/router.log", router_patterns),
+    "ROUTER": (
+        os.path.join(BASE_DIR, "logs", "router.log"),
+        router_patterns
+    ),
 
-    "SWITCH": ("../logs/switch.log", switch_patterns)
+    "SWITCH": (
+        os.path.join(BASE_DIR, "logs", "switch.log"),
+        switch_patterns
+    )
 }
+
 
 for source_name, (filepath, patterns) in sources.items():
 
-    print(f"\n{'='*15} VALIDATING {source_name} LOGS {'='*15}\n")
+    print(f"\n{'=' * 15} VALIDATING {source_name} LOGS {'=' * 15}\n")
 
-    with open(filepath, encoding="utf-8") as f:
+    try:
 
-        sample = f.readline()
+        with open(filepath, encoding="utf-8") as f:
 
-    print("RAW LOG:\n")
-    print(sample)
+            sample = f.readline().strip()
 
-    print("\nEXTRACTED FIELDS:\n")
+        print("RAW LOG:\n")
+        print(sample)
 
-    for field, pattern in patterns.items():
+        print("\nEXTRACTED FIELDS:\n")
 
-        match = re.search(pattern, sample)
+        for field, pattern in patterns.items():
 
-        if match:
+            match = re.search(pattern, sample)
 
-            print(f"{field}: {match.group(1)}")
+            if match:
 
-        else:
+                print(f"{field}: {match.group(1)}")
 
-            print(f"{field}: NOT FOUND")
+            else:
+
+                print(f"{field}: NOT FOUND")
+
+    except FileNotFoundError:
+
+        print(f"ERROR: File not found -> {filepath}")
+
+    except Exception as e:
+
+        print(f"ERROR: {str(e)}")
 
     print("\n")

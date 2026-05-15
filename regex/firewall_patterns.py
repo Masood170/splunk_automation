@@ -1,24 +1,27 @@
 patterns = {
 
-    "action": r":\s+(ALLOW|DENY|DROP|REJECT)",
+    "timestamp": r"^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})",
 
-    "protocol": r"(TCP|UDP|HTTP|HTTPS|DNS|FTP|ICMP)",
+    "device": r"\s(FIREWALL)\s",
 
-    "src_zone": r"src\s+(\w+):",
+    "action": r"action=(ALLOW|DENY|DROP|REJECT)",
 
-    "src_ip": r"src\s+\w+:(\d+\.\d+\.\d+\.\d+)",
+    "src_ip": r"src=(\d+\.\d+\.\d+\.\d+)",
 
-    "src_port": r"src\s+\w+:\d+\.\d+\.\d+\.\d+/(\d+)",
+    "dest_ip": r"dst=(\d+\.\d+\.\d+\.\d+)",
 
-    "dest_zone": r"dst\s+(\w+):",
+    "src_port": r"sport=(\d+)",
 
-    "dest_ip": r"dst\s+\w+:(\d+\.\d+\.\d+\.\d+)",
+    "dest_port": r"dport=(\d+)",
 
-    "dest_port": r"dst\s+\w+:\d+\.\d+\.\d+\.\d+/(\d+)",
-
-    "policy": r"policy=(\S+)",
+    "protocol": r"proto=(TCP|UDP|ICMP)",
 
     "bytes": r"bytes=(\d+)",
 
-    "duration": r"duration=(\d+)s"
+    "src_zone": r"src_zone=(\S+)",
+
+    "dest_zone": r"dst_zone=(\S+)",
+
+    "policy_id": r"policy_id=(\d+)"
+
 }

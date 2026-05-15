@@ -2,9 +2,16 @@ patterns = {
 
     "eventcode": r"EventID=(\d+)",
 
-    "username": r"SubjectUserName=(\S+)",
+    "hostname": r"Host=(\S+)",
 
-    "src_ip": r"IpAddress=(\d+\.\d+\.\d+\.\d+)",
+    "username": r"User=(\S+)",
 
-    "logontype": r"LogonType=(\d+)"
+    "pid": r"PID=(\d+)",
+
+    "source_name": r"Source=(\S+)",
+
+    "channel": r"Channel=(\S+)",
+
+    "message": r'Message="([^"]+)"'
+
 }

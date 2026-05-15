@@ -1,12 +1,21 @@
 patterns = {
 
-    "timestamp": r"^(\d+-\d+-\d+\s+\d+:\d+:\d+)",
+    "timestamp": r"^(\w+\s+\d+\s+\d+:\d+:\d+)",
 
-    "process": r"(sshd)",
+    "hostname": r"^\w+\s+\d+\s+\d+:\d+:\d+\s+(\S+)",
 
-    "pid": r"sshd\[(\d+)\]",
+    "process": r"\s(\w+)\[(\d+)\]:",
 
-    "username": r"for\s+(\S+)\s+from",
+    "pid": r"\[(\d+)\]:",
 
-    "src_ip": r"from\s+(\d+\.\d+\.\d+\.\d+)"
+    "log_level": r"\[(INFO|WARN|ERROR|DEBUG|CRIT)\]",
+
+    "facility": r"\[(auth|daemon|cron|kern|syslog|user)\]",
+
+    "username": r"user\s+(\S+)|USER=(\S+)|for\s+(\S+)",
+
+    "src_ip": r"from\s+(\d+\.\d+\.\d+\.\d+)",
+
+    "message": r":\s+\[.*?\]\s+\[.*?\]\s+(.*)"
+
 }
